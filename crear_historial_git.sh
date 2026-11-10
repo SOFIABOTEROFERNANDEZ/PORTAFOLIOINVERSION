@@ -25,3 +25,16 @@ git add portafolio_app/servicio_mercado.py
 git commit -m "feat: agrega ServicioMercado con yfinance (precios y dividendos)"
 git checkout develop
 git merge --no-ff feature/datos-mercado -m "merge: integra feature/datos-mercado en develop"
+
+# ---------- feature/calculos ----------
+git checkout -b feature/calculos
+git add portafolio_app/calculadora_rentabilidad.py
+git commit -m "feat: agrega rentabilidad acumulada y efectiva anual (XIRR)"
+git add portafolio_app/portafolio.py
+git commit -m "feat: agrega Portafolio con posiciones FIFO, dividendos y resumen"
+git add portafolio_app/proyeccion_anual.py portafolio_app/simulador_montecarlo.py
+git commit -m "feat: agrega proyección a 1 año y simulación Monte Carlo"
+git add tests/test_calculos.py
+git commit -m "test: agrega pruebas unitarias de los cálculos"
+git checkout develop
+git merge --no-ff feature/calculos -m "merge: integra feature/calculos en develop"
