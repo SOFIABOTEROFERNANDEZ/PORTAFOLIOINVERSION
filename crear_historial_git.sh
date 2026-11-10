@@ -18,3 +18,10 @@ git add portafolio_app/valorador_renta_fija.py
 git commit -m "feat: agrega ValoradorRentaFija para CDT, TES y bonos"
 git checkout develop
 git merge --no-ff feature/modelos -m "merge: integra feature/modelos en develop"
+
+# ---------- feature/datos-mercado ----------
+git checkout -b feature/datos-mercado
+git add portafolio_app/servicio_mercado.py
+git commit -m "feat: agrega ServicioMercado con yfinance (precios y dividendos)"
+git checkout develop
+git merge --no-ff feature/datos-mercado -m "merge: integra feature/datos-mercado en develop"
