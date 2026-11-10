@@ -175,3 +175,22 @@ classDiagram
     Portafolio ..> CalculadoraRentabilidad
     Portafolio ..> ValoradorRentaFija
 ```
+
+## ★ Pruebas
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## ★ Flujo de trabajo con Git
+
+Ramas: `main` (estable), `develop` (integración) y ramas de funcionalidad (`feature/modelos`, `feature/calculos`,
+`feature/datos-mercado`, `feature/dashboard`, `docs/readme-uml`). Para reproducir el historial:
+`bash scripts/crear_historial_git.sh`. Ver [wiki](docs/wiki/Flujo-de-Trabajo-Git.md).
+
+## ⚠️ Limitaciones
+
+- Todos los valores deben registrarse en **una sola moneda** (no hay conversión USD/COP).
+- CDT/TES/bonos se valoran por devengo a su tasa E.A.; no se usa precio de mercado secundario.
+- No incluye impuestos ni retenciones.
+- Herramienta educativa; no constituye asesoría financiera.
