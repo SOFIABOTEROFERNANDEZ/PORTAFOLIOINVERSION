@@ -38,3 +38,12 @@ git add tests/test_calculos.py
 git commit -m "test: agrega pruebas unitarias de los cálculos"
 git checkout develop
 git merge --no-ff feature/calculos -m "merge: integra feature/calculos en develop"
+
+# ---------- feature/dashboard ----------
+git checkout -b feature/dashboard
+git add portafolio_app/graficos.py
+git commit -m "feat: agrega clase Graficos con figuras Plotly"
+git add portafolio_app/dashboard.py main.py
+git commit -m "feat: agrega Dashboard Streamlit y archivo principal main.py"
+git checkout develop
+git merge --no-ff feature/dashboard -m "merge: integra feature/dashboard en develop"
