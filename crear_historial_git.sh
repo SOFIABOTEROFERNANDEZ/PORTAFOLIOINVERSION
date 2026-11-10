@@ -47,3 +47,24 @@ git add portafolio_app/dashboard.py main.py
 git commit -m "feat: agrega Dashboard Streamlit y archivo principal main.py"
 git checkout develop
 git merge --no-ff feature/dashboard -m "merge: integra feature/dashboard en develop"
+
+# ---------- docs/readme-uml ----------
+git checkout -b docs/readme-uml
+git add docs/generar_uml.py docs/diagrama_uml.png docs/diagrama_uml.mmd
+git commit -m "docs: agrega diagrama UML generado desde el código"
+git add README.md
+git commit -m "docs: agrega README con instalación, uso y cálculos"
+git add docs/wiki scripts
+git commit -m "docs: agrega páginas de la wiki y script de historial git"
+git checkout develop
+git merge --no-ff docs/readme-uml -m "merge: integra documentación en develop"
+
+# ---------- release ----------
+git checkout main
+git merge --no-ff develop -m "release: versión 1.0.0"
+git tag -a v1.0.0 -m "Primera versión funcional"
+
+git status --short
+git log --graph --oneline --all
+echo
+echo "Para publicar:  git remote add origin <URL>  &&  git push -u origin --all  &&  git push --tags"
