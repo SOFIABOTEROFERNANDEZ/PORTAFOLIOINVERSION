@@ -1,3 +1,4 @@
+![Presentación curso de finanzas y economía corporativo financiero verde](Presentaci%C3%B3n%20curso%20de%20finanzas%20y%20econom%C3%ADa%20corporativo%20financiero%20verde.jpg)
 # ★ Seguimiento y Simulación de Portafolio de Inversión
 
 Aplicación en **Python + Streamlit + Plotly + yfinance** para registrar, monitorear y evaluar un portafolio de
